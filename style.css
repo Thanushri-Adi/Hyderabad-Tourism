@@ -322,6 +322,56 @@ footer {
     .section h2 {
       color: #6d1b7b;
     }
+
+.with-icon {
+  position: relative;
+  padding-left: 3.5rem;
+}
+
+.with-icon .icon {
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
+  font-size: 2rem;
+  color: #6d1b7b;
+}
+
+.alt-bg {
+  background-color: #f5ebf8;
+}
+
+.fun-fact {
+  background: linear-gradient(90deg, #e9d5ff, #f3e8ff);
+  border-left: 6px solid #6d1b7b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.map-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #f9f4fb;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.map-section h2 {
+  color: #6d1b7b;
+  margin-bottom: 0.5rem;
+}
+
+.map-container {
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+
     
     .attraction {
       background: white;
