@@ -19,11 +19,35 @@
     <input type="text" id="searchBar" placeholder="Search..." onkeydown="if(event.key==='Enter') searchbar()" />
   </nav>
 
-  <div class="image">
-    <img src="images/final.jpg" alt="Hyderabad City" />
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="images/slide1.webp" />
+    <div class="caption">Charminar - The Heart of Hyderabad</div>
   </div>
 
-  <header class="index">
+  <div class="mySlides fade">
+    <img src="images/slide2.jpg" />
+    <div class="caption">Hyderabad Nights: Lights and Warmth</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/slide3.jpg" />
+    <div class="caption">Soul of Hyderabad in a single frame</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+  <div class="dots" style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+</div>
+<header class="index">
     <h1>Welcome to Hyderabad</h1>
     <h4>Discover the charm, culture, and colors of the City of Pearls</h4>
   </header>
@@ -78,10 +102,38 @@
 
     <div class="culture-item">
       <img src="images/charnight.webp" alt="Charminar at Night">
-      <h4>Charminar Night Lights</h4>
+      <h4>Ramzan Nights at Charminar</h4>
       <p>The monument glows during Ramzan nights, surrounded by food stalls and festive crowds.</p>
       <a href="https://en.wikipedia.org/wiki/Charminar" target="_blank" class="know-more">Know More</a>
     </div>
+    <div class="culture-item">
+  <img src="images/bathukamma.jpg" alt="Bathukamma Festival">
+  <h4>Bathukamma Festival</h4>
+  <p>A vibrant floral festival celebrated by women, showcasing devotion, music, dance, and Telangana pride.</p>
+  <a href="https://en.wikipedia.org/wiki/Bathukamma" target="_blank" class="know-more">Know More</a>
+</div>
+
+<div class="culture-item">
+  <img src="images/perini.jpg" alt="Perini Dance">
+  <h4>Perini & Telangana Folk Dance</h4>
+  <p>The Perini Shivathandavam, a warrior dance of Telangana, echoes the strength and spirit of the region.</p>
+  <a href="https://en.wikipedia.org/wiki/Perini_Shivathandavam" target="_blank" class="know-more">Know More</a>
+</div>
+
+<div class="culture-item">
+  <img src="images/laadbazaar-1.webp" alt="Laad Bazaar Shopping">
+  <h4>Laad Bazaar Shopping</h4>
+  <p>Known for bangles, pearls, and ethnic wear, this centuries-old market is a shopper’s paradise.</p>
+  <a href="https://en.wikipedia.org/wiki/Laad_Bazaar" target="_blank" class="know-more">Know More</a>
+</div>
+
+<div class="culture-item">
+  <img src="images/urdupoetry.png" alt="Urdu Culture & Poetry">
+  <h4>Urdu Culture & Poetry</h4>
+  <p>Hyderabad’s deep-rooted love for ghazals and poetry echoes through its art, literature, and daily life.</p>
+  <a href="https://en.wikipedia.org/wiki/Urdu_poetry" target="_blank" class="know-more">Know More</a>
+</div>
+
   </div>
 </section>
 
