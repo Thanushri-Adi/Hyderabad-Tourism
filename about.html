@@ -5,6 +5,7 @@
   <title>Hyderabad Mini Tourism - About</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
@@ -13,6 +14,20 @@
     <h1>About Hyderabad</h1>
     <p>Get to know the story behind the City of Pearls</p>
   </header>
+<nav>
+    <div class="sep">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="attractions.html">Attractions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <input type="text" id="searchBar" placeholder="Search..." onkeydown="if(event.key==='Enter') searchbar()" />
+  </nav>
+  <section class="banner-image">
+  <img src="images/banner.jpg" alt="Hyderabad Night Skyline">
+  <div class="banner-caption">Where every light tells a story — Hyderabad, timeless and alive.</div>
+</section>
+
   <section class="quick-facts">
   <h3>📌 Quick Facts</h3>
   <ul>
@@ -23,17 +38,6 @@
   </ul>
 </section>
 
-
-  <nav>
-    <div class="sep">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="attractions.html">Attractions</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <input type="text" id="searchBar" placeholder="Search..." onkeydown="if(event.key==='Enter') searchbar()" />
-  </nav>
-
   <div class="container">
 
     <section class="section with-icon">
@@ -42,33 +46,34 @@
       <p>Founded in 1591 by Muhammad Quli Qutb Shah, Hyderabad grew around the Charminar and became a cultural and trading hub. Under the Nizams, it flourished into a princely state known for its wealth and architecture.</p>
     </section>
 
-    <section class="section with-icon alt-bg">
+    <section class="section with-icon ">
       <i class="fas fa-users icon"></i>
-      <h2>Culture & People</h2>
+      <h2> Culture & People</h2>
       <p>Hyderabad is a melting pot of traditions, languages, and religions. It’s known for its warm hospitality, mouth-watering cuisine like Hyderabadi biryani, and celebrations like Bonalu, Diwali, and Eid.</p>
     </section>
 
     <section class="section with-icon">
-      <i class="fas fa-city icon"></i>
-      <h2>Modern Hyderabad</h2>
-      <p>Today, Hyderabad is a leading IT and biotech hub. With areas like Hitech City and Cyberabad, it's a symbol of modern growth while preserving its rich heritage. It's where the old and new coexist in harmony.</p>
-    </section>
+  <i class="fas fa-city icon"></i>
+  <h2> Modern Hyderabad</h2>
+  <p>
+    Today, Hyderabad is a leading IT and biotech hub. With areas like Hitech City and Cyberabad, it's a symbol of modern growth while preserving its rich heritage. It's where the old and new coexist in harmony.
+  </p>
 
-    <!-- <section class="section fun-fact">
-      <h2>Did You Know?</h2>
-      <p>🎬 <strong>Ramoji Film City</strong> in Hyderabad is the largest integrated film city in the world and a major tourist attraction.</p>
-    </section> -->
-    <section class="ramoji-card">
-  <img src="images/ramoji.jpg" alt="Ramoji Film City">
-  <div class="ramoji-info">
-    <h3>🎬 Ramoji Film City</h3>
-    <p>The world’s largest integrated film studio complex, spanning over 1666 acres.</p>
-    <a href="https://en.wikipedia.org/wiki/Ramoji_Film_City" target="_blank">Learn More</a>
+  <div class="subsection">
+    <img src="images/raamoji.webp" alt="Ramoji Film City" class="subsection-img">
+    <div class="subsection-text">
+      <h3>🎬 Ramoji Film City</h3>
+      <p>
+        A crown jewel of modern Hyderabad, Ramoji Film City is the world's largest integrated film studio complex, spread across 1666 acres. It’s not just a film destination — it’s a universe of cinema, themed tours, gardens, and adventure zones.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Ramoji_Film_City" target="_blank">Learn More</a>
+    </div>
   </div>
 </section>
 
+
 <div class="quote-card">
-  <p>“Hyderabad is not just a city, it's a magical blend of history, biryani, and humanity.”</p>
+  <p>“Hyderabad is not just a city, it's a magical blend of history, technology, and humanity.”</p>
 </div>
 <section class="timeline-section">
   <h2>Hyderabad Through Time</h2>
@@ -115,15 +120,7 @@
     </iframe>
   </div>
 </section>
-
-
-  </div>
-  <section class="banner-image">
-  <img src="images/hyderabad-essence.jpg" alt="Essence of Hyderabad">
-  <div class="banner-caption">From pearls to progress — Hyderabad is where tradition meets tomorrow.</div>
-</section>
-
-
+</div>
   <footer>
     &copy; 2025 Hyderabad Mini Tourism | Sharing the story of our city
   </footer>

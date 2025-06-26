@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
   background-color: #f9f7fbe5;
   color: #333;
   margin: 0;
@@ -16,7 +16,7 @@ body {
 header {
        background: #6d1b7b;
       color: #ffffff;
-      padding: 1.5rem 1rem;
+      padding: 1rem 1rem;
       text-align: center;
   }
     
@@ -88,11 +88,7 @@ nav .sep a:hover {
   position: relative;
 }
 
-/* .mySlides img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-} */
+
 .mySlides img {
   width: 100%;
   height: 580px;
@@ -151,34 +147,7 @@ nav .sep a:hover {
   background-color: #ffffff;
 }
 
-/* .dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 4px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-}
 
-.active, .dot:hover {
-  background-color: #6d1b7b; */
-
-
-/* .image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.image img {
-  width: 100%;
-  height: auto;
-  max-height: 600px;
-  object-fit: cover;
-  opacity: 0.94;
-} */
 
 .container {
   max-width: 1100px;
@@ -306,11 +275,14 @@ nav .sep a:hover {
 footer {
   background: #6d1b7b;
   text-align: center;
-  padding: 1.2rem;
+  padding: 1.2rem 1rem;
   font-size: 0.9rem;
-  margin-top: 3rem;
   color: white;
+  margin-top: 3rem;
+  width: 100%;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.06);
 }
+
 
 .section {
       background: white;
@@ -322,6 +294,9 @@ footer {
     .section h2 {
       color: #6d1b7b;
     }
+.with-icon h2 {
+  margin-top: 0;
+}
 
 .with-icon {
   position: relative;
@@ -340,64 +315,54 @@ footer {
   background-color: #f5ebf8;
 }
 
-/* .fun-fact {
-  background: linear-gradient(90deg, #e9d5ff, #f3e8ff);
-  border-left: 6px solid #6d1b7b;
-  padding: 1.5rem;
-  border-radius: 10px;
-  font-size: 1.05rem;
-  font-weight: 500;
-  margin-top: 2rem;
-} */
- .ramoji-card {
+.subsection {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 1.5rem;
-  background-color: #f8f4fc;
+  margin-top: 2rem;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.subsection-img {
+  width: 280px;
+  max-width: 100%;
   border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.ramoji-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.ramoji-card img {
-  width: 240px;
-  height: 160px;
   object-fit: cover;
-  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
 }
 
-.ramoji-info h3 {
-  margin: 0 0 0.5rem;
+.subsection-text {
+  flex: 1;
+  min-width: 220px;
+}
+
+.subsection-text h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
   color: #6d1b7b;
 }
 
-.ramoji-info p {
+.subsection-text p {
   font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+  line-height: 1.6;
   color: #444;
 }
 
-.ramoji-info a {
+.subsection-text a {
   display: inline-block;
-  margin-top: 0.4rem;
-  color: white;
-  background-color: #6d1b7b;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 0.85rem;
+  margin-top: 0.6rem;
+  font-weight: 500;
   text-decoration: none;
+  color: #6d1b7b;
+  transition: 0.2s ease;
 }
 
-.ramoji-info a:hover {
-  background-color: #51125a;
+.subsection-text a:hover {
+  text-decoration: underline;
 }
 
 .quote-card {
@@ -464,29 +429,36 @@ footer {
   color: #333;
 }
 .banner-image {
+  margin-bottom: 2.5rem;
   position: relative;
-  margin-top: 3rem;
-  border-radius: 10px;
+  margin-top: 5; 
+  /* border-radius: 12px; */
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .banner-image img {
   width: 100%;
-  height: 250px;
+  height: 260px;
   object-fit: cover;
-  opacity: 0.92;
+  object-position: center;
+  display: block;
+  opacity: 0.96;
 }
 
 .banner-caption {
   position: absolute;
   bottom: 20px;
   left: 30px;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  padding: 10px 15px;
-  font-size: 1.2rem;
-  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #f9e6ff;
+  padding: 12px 18px;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
+
 .section,
 .ramoji-card,
 .timeline-section,
