@@ -5,17 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyderabad Mini Tourism - Attractions</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
 
 </head>
 <body>
-    <body>
-  <header>
-    <h1>Top Attractions in Hyderabad</h1>
-    <p>Explore some of the city's most iconic places</p>
-  </header>
-
   <nav>
     <div class="sep">
     <a href="index.html">Home</a>
@@ -25,8 +20,27 @@
     </div>
     <input type="text" id="searchBar" placeholder="Search..." onkeydown="if(event.key==='Enter') searchbar()">
   </nav>
+  <div class="photo">
+  <img src="images/final.jpg" alt="Hyderabad Watercolor Banner" />
+</div>
+
+<header class="index">
+    <h1>Top Attractions To Visit </h1>
+    <p>Explore some of the city's most iconic places</p>
+  </header> 
+
+<section class="category-section">
+  <h2 class="category-heading">Explore by Categories</h2>
+  <div class="category-nav">
+    <a href="#historical"><i class="fas fa-landmark"></i> Historical & Cultural</a>
+    <a href="#leisure"><i class="fas fa-theater-masks"></i> Leisure & Entertainment</a>
+    <a href="#nature"><i class="fas fa-leaf"></i> Nature & Serenity</a>
+    <a href="#science"><i class="fas fa-flask"></i> Educational</a>
+  </div>
+</section>
 
   <div class="container">
+     <h2 class="category-title" id="historical">Historical & Cultural Landmarks</h2>
     <div class="attraction" id="charminar">
       <img src="images/charminar.jpeg" alt="Charminar">
       <div class="attraction-details">
@@ -56,22 +70,125 @@
         <a href="https://en.wikipedia.org/wiki/Golconda" target="_blank">Know More</a>
       </div>
     </div>
+<div class="attraction" id="qutub-shahi">
+  <img src="images/qutub-shahi.jpeg" alt="Qutub Shahi Tombs">
+  <div class="attraction-details">
+    <h2>Qutub Shahi Tombs</h2>
+    <ul>
+      <li>Distance from City Centre: 11 km</li>
+      <li>Nearest Metro Station: Jubilee Hills Check Post</li>
+      <li>Place Type: Historical Monuments</li>
+      <li>Ideal for: History lovers</li>
+    </ul>
+    <p>A beautiful complex of tombs and mosques built by the Qutub Shahi dynasty.</p>
+    <a href="https://en.wikipedia.org/wiki/Qutb_Shahi_tombs" target="_blank">Know More</a>
+  </div>
+</div>
+<div class="attraction" id="mecca-masjid">
+  <img src="images/mecca.webp" alt="Mecca Masjid">
+  <div class="attraction-details">
+    <h2>Mecca Masjid</h2>
+    <ul>
+      <li>Distance from City Centre: 5 km</li>
+      <li>Nearest Metro Station: Salar Jung Museum Metro Station</li>
+      <li>Place Type: Mosque</li>
+      <li>Ideal for: Cultural Visitors</li>
+    </ul>
+    <p>One of the largest mosques in India, built using bricks from Mecca, with incredible Mughal architecture.</p>
+    <a href="https://en.wikipedia.org/wiki/Mecca_Masjid,_Hyderabad" target="_blank">Know More</a>
+  </div>
+</div>
 
-    <div class="attraction" id="hussainsagar">
-      <img src="images/hussain.webp" alt="Hussain Sagar Lake">
-      <div class="attraction-details">
-        <h2>Hussain Sagar Lake</h2>
-        <ul>
-            <li>Distance from City Centre : 6.5 km</li>
-<li>Nearest Metro Station : Irrum Manzil Metro Station (2.7 km), Lakdikapul Metro Station (3.1 km)</li>
-<li>Place Type : Lake Front, Scenic Drive</li>
-<li>Ideal for : Family, Kids, Couple & Friends</li>
-        </ul>
-        <p>A tranquil artificial lake with a massive Buddha statue, ideal for boating and relaxation. Connecting the twin cities, Hussain Sagar Lake boasts of being the largest artificial lake in Asia.</p>
-        <a href="https://en.wikipedia.org/wiki/Hussain_Sagar" target="_blank">Know More</a>
-      </div>
-    </div>
+<div class="attraction" id="birla-mandir">
+  <img src="images/birla-mandir.jpeg" alt="Birla Mandir">
+  <div class="attraction-details">
+    <h2>Birla Mandir</h2>
+    <ul>
+      <li>Distance from City Centre: 4.8 km</li>
+      <li>Nearest Metro Station: Lakdikapul Metro Station</li>
+      <li>Place Type: Temple</li>
+      <li>Ideal for: Devotees & Tourists</li>
+    </ul>
+    <p>A stunning white marble temple built on a hill, offering panoramic views of the city.</p>
+    <a href="https://en.wikipedia.org/wiki/Birla_Mandir,_Hyderabad" target="_blank">Know More</a>
+  </div>
+</div>
 
+<div class="attraction" id="jagannath-temple">
+  <img src="images/jagannath-temple.jpeg" alt="Jagannath Temple Hyderabad">
+  <div class="attraction-details">
+    <h2>Shri Jagannath Temple</h2>
+    <ul>
+      <li>Distance from City Centre: 6 km</li>
+      <li>Nearest Metro Station: Madhapur Metro</li>
+      <li>Place Type: Religious Site</li>
+      <li>Ideal for: Devotees</li>
+    </ul>
+    <p>A replica of the Puri Jagannath Temple, known for its red sandstone architecture and peaceful ambiance.</p>
+    <a href="https://en.wikipedia.org/wiki/Jagannath_Temple,_Hyderabad" target="_blank">Know More</a>
+  </div>
+</div>
+
+
+<div class="attraction" id="iskcon">
+  <img src="images/iskcon.jpeg" alt="ISKCON Temple">
+  <div class="attraction-details">
+    <h2>ISKCON Temple, Abids</h2>
+    <ul>
+      <li>Distance from City Centre: 4.2 km</li>
+      <li>Nearest Metro Station: Nampally Metro Station</li>
+      <li>Place Type: Spiritual & Cultural</li>
+      <li>Ideal for: Devotees & Travelers</li>
+    </ul>
+    <p>Spiritual center for Lord Krishna devotees with daily aarti, bhajans, and serene temple atmosphere.</p>
+    <a href="https://en.wikipedia.org/wiki/ISKCON" target="_blank">Know More</a>
+  </div>
+</div>
+<h2 class="category-title" id="leisure">Leisure & Entertainment</h2>
+
+    <div class="attraction" id="snow-world">
+  <img src="images/snow-world.jpeg" alt="Snow World Hyderabad">
+  <div class="attraction-details">
+    <h2>Snow World</h2>
+    <ul>
+      <li>Distance from City Centre: 4.5 km</li>
+      <li>Nearest Metro Station: Assembly Metro Station</li>
+      <li>Place Type: Indoor Amusement Park</li>
+      <li>Ideal for: Kids, Friends & Family</li>
+    </ul>
+    <p>An indoor snow-themed amusement park where you can enjoy artificial snow, snowball fights, and more!</p>
+    <a href="https://en.wikipedia.org/wiki/Snow_World,_Hyderabad" target="_blank">Know More</a>
+  </div>
+</div>
+
+<div class="attraction" id="shilparamam">
+  <img src="images/shilparamam.webp" alt="Shilparamam Hyderabad">
+  <div class="attraction-details">
+    <h2>Shilparamam</h2>
+    <ul>
+      <li>Distance from City Centre: 13 km</li>
+      <li>Nearest Metro Station: Hitec City Metro Station</li>
+      <li>Place Type: Arts & Crafts Village</li>
+      <li>Ideal for: Art Lovers & Tourists</li>
+    </ul>
+    <p>A cultural village showcasing traditional crafts, art forms, and local performances all year round.</p>
+    <a href="https://en.wikipedia.org/wiki/Shilparamam" target="_blank">Know More</a>
+  </div>
+</div>
+<div class="attraction" id="wonderla">
+  <img src="images/wonderla.jpeg" alt="Wonderla Hyderabad">
+  <div class="attraction-details">
+    <h2>Wonderla Hyderabad</h2>
+    <ul>
+      <li>Distance from City Centre: ~28 km</li>
+      <li>Nearest Metro Station: Nagole Metro (26 km approx)</li>
+      <li>Place Type: Amusement & Water Park</li>
+      <li>Ideal for: Family & Friends</li>
+    </ul>
+    <p>One of the most popular amusement parks in Hyderabad with thrilling rides and water slides.</p>
+    <a href="https://www.wonderla.com/hyderabad-amusement-park/" target="_blank">Know More</a>
+  </div>
+</div>
     <div class="attraction" id="ramoji">
       <img src="images/raamoji.webp" alt="Ramoji Film City">
       <div class="attraction-details">
@@ -86,7 +203,100 @@
     </p>
   <a href="https://en.wikipedia.org/wiki/Ramoji_Film_City" target="_blank">Know More</a>
       </div>
+</div>
+<h2 class="category-title" id="nature">Nature & Serenity</h2>
+ <div class="attraction" id="hussainsagar">
+      <img src="images/hussain.webp" alt="Hussain Sagar Lake">
+      <div class="attraction-details">
+        <h2>Hussain Sagar Lake</h2>
+        <ul>
+            <li>Distance from City Centre : 6.5 km</li>
+<li>Nearest Metro Station : Irrum Manzil Metro Station (2.7 km), Lakdikapul Metro Station (3.1 km)</li>
+<li>Place Type : Lake Front, Scenic Drive</li>
+<li>Ideal for : Family, Kids, Couple & Friends</li>
+        </ul>
+        <p>A tranquil artificial lake with a massive Buddha statue, ideal for boating and relaxation. Connecting the twin cities, Hussain Sagar Lake boasts of being the largest artificial lake in Asia.</p>
+        <a href="https://en.wikipedia.org/wiki/Hussain_Sagar" target="_blank">Know More</a>
+      </div>
     </div>
+
+<div class="attraction" id="statue-equality">
+  <img src="images/equality.jpeg" alt="Statue of Equality">
+  <div class="attraction-details">
+    <h2>Statue of Equality</h2>
+    <ul>
+      <li>Distance from City Centre: ~34 km</li>
+      <li>Nearest Metro Station: LB Nagar (approx. 29 km away)</li>
+      <li>Place Type: Monument</li>
+      <li>Ideal for: Spiritual seekers & tourists</li>
+    </ul>
+    <p>A 216-foot tall statue dedicated to the 11th-century Bhakti Saint Ramanujacharya, promoting equality and peace.</p>
+    <a href="https://en.wikipedia.org/wiki/Statue_of_Equality_(India)" target="_blank">Know More</a>
+  </div>
+</div>
+
+
+<div class="attraction" id="zoo-park">
+  <img src="images/nehru-zoo.webp" alt="Nehru Zoo Park">
+  <div class="attraction-details">
+    <h2>Nehru Zoological Park</h2>
+    <ul>
+      <li>Distance from City Centre: 6.7 km</li>
+      <li>Nearest Metro Station: Nampally Metro Station (5 km approx)</li>
+      <li>Place Type: Zoo, Wildlife Park</li>
+      <li>Ideal for: Families & Kids</li>
+    </ul>
+    <p>Home to over 1,500 species of animals and birds, perfect for wildlife lovers and families.</p>
+    <a href="https://en.wikipedia.org/wiki/Nehru_Zoological_Park" target="_blank">Know More</a>
+  </div>
+</div>
+
+<h2 class="category-title" id="educational">Science & Knowledge</h2>
+<div class="attraction" id="planetarium">
+  <img src="images/planetarium.webp" alt="Birla Planetarium">
+  <div class="attraction-details">
+    <h2>Birla Planetarium</h2>
+    <ul>
+      <li>Distance from City Centre: 5 km</li>
+      <li>Nearest Metro Station: Lakdikapul Metro Station</li>
+      <li>Place Type: Science & Educational</li>
+      <li>Ideal for: Students & Families</li>
+    </ul>
+    <p>Interactive science exhibits and daily sky shows attract curious minds of all ages.</p>
+    <a href="https://en.wikipedia.org/wiki/Birla_Science_Museum" target="_blank">Know More</a>
+  </div>
+</div>
+
+<div class="attraction" id="nizam-museum">
+  <img src="images/nizam-museum.jpeg" alt="Nizam Museum">
+  <div class="attraction-details">
+    <h2>The Nizam's Museum</h2>
+    <ul>
+      <li>Distance from City Centre: 5 km</li>
+      <li>Nearest Metro Station: Osmania Medical College</li>
+      <li>Place Type: Heritage Museum</li>
+      <li>Ideal for: History Enthusiasts</li>
+    </ul>
+    <p>A grand museum housing gifts and artifacts belonging to the Nizams of Hyderabad.</p>
+    <a href="https://en.wikipedia.org/wiki/Nizam%27s_Museum" target="_blank">Know More</a>
+  </div>
+</div>
+<div class="attraction" id="salarjung">
+  <img src="images/salarjung.webp" alt="Salar Jung Museum">
+  <div class="attraction-details">
+    <h2>Salar Jung Museum</h2>
+    <ul>
+      <li>Distance from City Centre: 5.6 km</li>
+      <li>Nearest Metro Station: MGBS Metro Station (1.3 km)</li>
+      <li>Place Type: Museum</li>
+      <li>Ideal for: Family, History Enthusiasts, Students</li>
+    </ul>
+    <p>One of the three National Museums of India, Salar Jung Museum is renowned for its vast collection of art, antiques, sculptures, manuscripts, and furniture from all over the world. It is a treasure trove of knowledge and history curated by Nawab Mir Yousuf Ali Khan, famously known as Salar Jung III.</p>
+    <a href="https://en.wikipedia.org/wiki/Salar_Jung_Museum" target="_blank">Know More</a>
+  </div>
+</div>
+
+
   </div>
 
   <footer>
