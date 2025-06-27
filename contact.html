@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyderabad Mini Tourism - Contact</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hyderabad Mini Tourism - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
   <script src="script.js" defer></script>
-
 </head>
 <body>
-    <header>
+  <header>
     <h1>Contact Us</h1>
     <p>We'd love to hear from you!</p>
   </header>
 
   <nav>
-     <div class="sep">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="attractions.html">Attractions</a>
-    <a href="contact.html">Contact</a>
-     </div>
-    <input type="text" id="searchBar" placeholder="Search..." onkeydown="if(event.key==='Enter') searchbar()">
+    <div class="sep">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="attractions.html">Attractions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <input type="text" id="searchBar" placeholder="Search..." onkeydown="if(event.key==='Enter') searchbar()" />
   </nav>
-
+  
   <div class="container">
-    <div class="contact-section">
+    <section class="contact-enhanced">
       <h2>Get in Touch</h2>
+      <p class="subtext">Whether you have questions, feedback, or just want to say hello, we’re here for you!</p>
 
-      <div class="contact-info">
-        <p><strong> Phone : </strong> +91 12345 67890</p>
-        <p><strong> Email : </strong> explore@hyderabadtour.com</p>
-        <p><strong> Address : </strong> Tourist Office, Tank Bund Road, Hyderabad, Telangana</p>
-        <p><strong> Hours : </strong> Monday–Saturday: 9 AM – 6 PM<br>Sunday: Closed</p>
-      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-box">
+            <h3>📍 Address</h3>
+            <p>Tourist Office, Tank Bund Road, Hyderabad, Telangana</p>
+          </div>
 
-      <div class="contact-form">
-        <h3>Send us a Message</h3>
-        <form>
+          <div class="info-box">
+            <h3>📞 Phone</h3>
+            <p>+91 12345 67890</p>
+          </div>
+
+          <div class="info-box">
+            <h3>✉️ Email</h3>
+            <p>explore@hyderabadtour.com</p>
+          </div>
+
+          <div class="info-box">
+            <h3>🕐 Hours</h3>
+            <p>Mon – Sat: 9:00 AM – 6:00 PM<br>Sun: Closed</p>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for contacting us!')">
+          <h3>Send us a Message</h3>
           <label for="name">Name</label>
           <input type="text" id="name" placeholder="Your Name" required>
 
@@ -46,12 +61,12 @@
           <input type="email" id="email" placeholder="Your Email" required>
 
           <label for="message">Message</label>
-          <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+          <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
 
           <button type="submit">Submit</button>
         </form>
       </div>
-    </div>
+    </section>
   </div>
 
   <footer>
