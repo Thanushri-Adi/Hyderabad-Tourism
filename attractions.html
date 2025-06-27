@@ -302,5 +302,24 @@
   <footer>
     &copy; 2025 Hyderabad Mini Tourism | Discover your next destination
   </footer>
+  <div class="chatbot-toggle" onclick="toggleChat()">
+  💬
+</div>
+
+<div class="chatbot-box" id="chatbotBox">
+  <div class="chatbot-header">
+    <span>Hyderabad Assistant</span>
+    <button onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chatbot-messages" id="chatbotMessages">
+    <div class="bot-message">Hi there! Ask me about places in Hyderabad 😊</div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" id="userInput" placeholder="Ask something..." onkeydown="if(event.key==='Enter') sendMessage()">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+ <script src="script.js" defer></script>
 </body>
 </html>
