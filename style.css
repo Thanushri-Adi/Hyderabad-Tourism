@@ -280,13 +280,14 @@ nav .sep a:hover {
     .section h2 {
       color: #6d1b7b;
     }
-.with-icon h2 {
+ .with-icon h2 {
   margin-top: 0;
 }
 
-.with-icon {
+/* .with-icon {
   position: relative;
   padding-left: 3.5rem;
+  gap: 15px; 
 }
 
 .with-icon .icon {
@@ -295,7 +296,20 @@ nav .sep a:hover {
   top: 1.5rem;
   font-size: 2rem;
   color: #6d1b7b;
+}  */
+.with-icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px; 
+  margin-bottom: 30px;
 }
+
+.with-icon .icon {
+  font-size: 2rem;
+  color: #6d1b7b;
+  margin-top: 4px;
+}
+
 
 .alt-bg {
   background-color: #f5ebf8;

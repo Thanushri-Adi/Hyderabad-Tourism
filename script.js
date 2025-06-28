@@ -91,11 +91,50 @@ function toggleChat() {
 
 // ---------------- FUZZY BOT REPLY LOGIC ----------------
 const keywords = [
-  "charminar", "golconda", "ramoji", "fort", "forts", "temples", "temple",
+  // Attractions & Landmarks
+  "charminar", "golconda", "ramoji", "fort", "forts", "temple", "temples",
   "museum", "museums", "planetarium", "lake", "hussainsagar", "snow world",
   "wonderla", "salarjung", "nizam", "birla mandir", "jagannath", "iskcon",
-  "attractions", "places", "visit", "explore", "contact", "recommend", "suggest", "hello", "hi", "bye", "timing", "ticket"
+
+  // General Tourist Queries
+  "attractions", "places", "visit", "explore", "recommend", "suggest",
+
+  // User Types & Experience Preferences
+  "fun", "kids", "children", "family", "couple", "friends", "solo", "tourist", "local",
+
+  // Activities & Vibes
+  "adventure", "thrill", "relax", "calm", "quiet", "peaceful", "nature", "gardens", "parks",
+  "romantic", "photography", "scenic", "view", "spiritual", "meditation", "heritage walk", "guided tour",
+
+  //  Food & Culture
+  "food", "biryani", "eat", "cuisine", "dishes", "vegetarian", "street food", "night food", 
+  "culture", "tradition", "festivals", "celebration", "qawwali", "cultural show",
+
+  //  Shopping
+  "shopping", "markets", "souvenirs", "bazaar", "bangles", "pearls",
+
+  // Navigation & Timing
+  "how to reach", "map", "location", "directions", "route", "distance", "nearby",
+  "entry", "fees", "open", "closed", "timing", "ticket", "booking",
+
+  //  Time & Weather
+  "season", "weather", "climate", "best time", "summer", "winter", "monsoon",
+
+  //  Stays
+  "hotel", "stay", "area", "accommodation", "budget", "luxury",
+
+  // Transport
+  "transport", "metro", "bus", "auto", "cab", "ola", "uber", "airport",
+
+  // Itinerary Planning
+  "itinerary", "plan", "schedule", "weekend", "day trip", "two day", "short trip",
+
+  // Basic Interactions
+  "hello", "hi", "bye", "contact"
 ];
+
+
+
 
 const fuse = new Fuse(keywords, {
   includeScore: true,
@@ -103,46 +142,47 @@ const fuse = new Fuse(keywords, {
 });
 
 // ---------------- SMART BOT RESPONSE ----------------
+
 function getBotReply(userInput) {
   const input = userInput.toLowerCase().trim();
   const fuzzyMatch = fuse.search(input);
   const matchedKeyword = fuzzyMatch.length > 0 ? fuzzyMatch[0].item : input;
 
   if (matchedKeyword.includes("hello") || matchedKeyword.includes("hi") || matchedKeyword.includes("hey")) {
-    return "Hello! Ask me about Hyderabad’s attractions or places to visit!";
+    return "Hello! Ask me about Hyderabad’s attractions, places to visit, or fun things to do!";
   }
   if (matchedKeyword.includes("charminar")) {
-    return "Charminar is one of Hyderabad’s most famous historical attractions.  You can know more details from the attractions page.";
+    return "Charminar is one of Hyderabad’s most famous historical attractions. You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("golconda") || matchedKeyword.includes("fort")) {
-    return "You’ll love exploring attractions like Golconda Fort and Qutub Shahi Tombs!  You can know more details from the attractions page.";
+    return "You’ll love exploring attractions like Golconda Fort and Qutub Shahi Tombs! You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("temple")) {
-    return "Top temple attractions include Birla Mandir, Jagannath Temple, and ISKCON.  You can know more details from the attractions page.";
+    return "Top temple attractions include Birla Mandir, Jagannath Temple, and ISKCON. You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("museum")) {
-    return "You can visit Salar Jung Museum and The Nizam’s Museum — both are cultural gems!  You can know more details from the attractions page.";
+    return "You can visit Salar Jung Museum and The Nizam’s Museum — both are cultural gems! You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("lake") || matchedKeyword.includes("hussainsagar")) {
-    return "Hussain Sagar Lake is a relaxing water-based attraction in Hyderabad.  You can know more details from the attractions page.";
+    return "Hussain Sagar Lake is a relaxing water-based attraction in Hyderabad. You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("planetarium")) {
-    return "Birla Planetarium is a great science attraction for kids and adults!  You can know more details from the attractions page.";
+    return "Birla Planetarium is a great science attraction for kids and adults! You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("ramoji")) {
-    return "Ramoji Film City is the perfect blend of cinema and adventure!  You can know more details from the attractions page.";
+    return "Ramoji Film City is the perfect blend of cinema and adventure! You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("wonderla")) {
-    return "Wonderla Hyderabad is a top-rated amusement park for all ages!  You can know more details from the attractions page.";
+    return "Wonderla Hyderabad is a top-rated amusement park for all ages! You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("snow")) {
-    return "Snow World gives you a snowy experience even in Hyderabad!  You can know more details from the attractions page.";
+    return "Snow World gives you a snowy experience even in Hyderabad! You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("salarjung")) {
-    return "Salar Jung Museum holds one of the largest antique collections in the world!  You can know more details from the attractions page.";
+    return "Salar Jung Museum holds one of the largest antique collections in the world! You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("nizam")) {
-    return "Nizam’s Museum gives you a glimpse into Hyderabad’s royal legacy.  You can know more details from the attractions page.";
+    return "Nizam’s Museum gives you a glimpse into Hyderabad’s royal legacy. You can know more details from the attractions page.";
   }
   if (matchedKeyword.includes("jagannath")) {
     return "Shri Jagannath Temple is known for its colorful architecture and peaceful vibe. You can know more details from the attractions page.";
@@ -150,24 +190,102 @@ function getBotReply(userInput) {
   if (matchedKeyword.includes("iskcon") || matchedKeyword.includes("krishna")) {
     return "ISKCON Temple is a serene spiritual center in Hyderabad. You can know more details from the attractions page.";
   }
-  if (matchedKeyword.includes("attraction") || matchedKeyword.includes("visit") || matchedKeyword.includes("places") || matchedKeyword.includes("explore")) {
-    return "There are attractions for every type of visitor — ask me about forts, museums, or temples!";
-  }
+
   if (matchedKeyword.includes("recommend") || matchedKeyword.includes("suggest")) {
-    return "I'd recommend Charminar, Ramoji Film City, and Golconda Fort for first-time visitors.  You can know more details from the attractions page.";
+    return "I'd recommend Charminar, Ramoji Film City, and Golconda Fort for first-time visitors. You can know more details from the attractions page.";
   }
-  if (matchedKeyword.includes("ticket") || matchedKeyword.includes("timing")) {
-    return "Timings and tickets vary by attraction — check the 'Know More' buttons for each.";
+
+  if (matchedKeyword.includes("ticket") || matchedKeyword.includes("timing") || matchedKeyword.includes("entry") || matchedKeyword.includes("fees")) {
+    return "Timings and ticket prices vary by attraction — check the 'Know More' buttons for each on the site.";
   }
+
+  if (matchedKeyword.includes("fun") || matchedKeyword.includes("adventure") || matchedKeyword.includes("thrill")) {
+    return "Looking for fun? Try Wonderla, Snow World, Ramoji Film City, or Laser Tag at Smaaash!";
+  }
+
+  if (matchedKeyword.includes("kids") || matchedKeyword.includes("children") || matchedKeyword.includes("family")) {
+    return "Great family spots include Birla Planetarium, Nehru Zoo Park, and Ramoji Film City.";
+  }
+
+  if (matchedKeyword.includes("romantic") || matchedKeyword.includes("couple") || matchedKeyword.includes("romance")) {
+    return "Romantic spots include Necklace Road, Shilparamam, and sunset views at Hussain Sagar.";
+  }
+
+  if (matchedKeyword.includes("shopping") || matchedKeyword.includes("market") || matchedKeyword.includes("bazaar")) {
+    return "For shopping, explore Laad Bazaar, Shilparamam, and Begum Bazaar for authentic items.";
+  }
+
+  if (matchedKeyword.includes("nature") || matchedKeyword.includes("park") || matchedKeyword.includes("garden")) {
+    return "Love nature? Visit KBR Park, Botanical Gardens, or Shamirpet Lake for greenery and peace.";
+  }
+
+  if (matchedKeyword.includes("relax") || matchedKeyword.includes("calm") || matchedKeyword.includes("peaceful") || matchedKeyword.includes("quiet")) {
+    return "Unwind at Hussain Sagar, Lumbini Park, or the calm of Jagannath Temple.";
+  }
+
+  if (matchedKeyword.includes("photos") || matchedKeyword.includes("instagram") || matchedKeyword.includes("photography") || matchedKeyword.includes("pictures")) {
+    return "Top photo spots: Charminar, Qutub Shahi Tombs, Necklace Road, and Shilparamam for colorful shots.";
+  }
+
+  if (matchedKeyword.includes("food") || matchedKeyword.includes("eat") || matchedKeyword.includes("biryani") || matchedKeyword.includes("cuisine")) {
+    return "Try Hyderabadi biryani at Paradise, Shah Ghouse, or Hotel Shadab. Also explore street food at Charminar!";
+  }
+
+  if (matchedKeyword.includes("festival") || matchedKeyword.includes("celebration")) {
+    return "Hyderabad lights up during Bonalu, Bathukamma, Diwali, and Eid! Ask me about them!";
+  }
+
+  if (matchedKeyword.includes("weather") || matchedKeyword.includes("climate") || matchedKeyword.includes("season") || matchedKeyword.includes("best time")) {
+    return "The best time to visit Hyderabad is October to February — cool weather and festive vibes!";
+  }
+
+  if (matchedKeyword.includes("map") || matchedKeyword.includes("location") || matchedKeyword.includes("how to reach") || matchedKeyword.includes("directions") || matchedKeyword.includes("route") || matchedKeyword.includes("nearby")) {
+    return "You can locate Hyderabad and its attractions using the map section on our About page.";
+  }
+if (matchedKeyword.includes("vegetarian")) {
+  return "Try vegetarian delights at Chutneys, Bikanervala, or Santosh Dhaba in Hyderabad!";
+}
+if (matchedKeyword.includes("street food") || matchedKeyword.includes("night food")) {
+  return "Explore Charminar area for night street food — kebabs, dosas, and Irani chai!";
+}
+if (matchedKeyword.includes("qawwali") || matchedKeyword.includes("cultural show")) {
+  return "Try Dargah near Charminar for qawwali nights or cultural shows during Bonalu and Bathukamma!";
+}
+if (matchedKeyword.includes("heritage walk") || matchedKeyword.includes("guided tour")) {
+  return "Heritage walks around Old City and Charminar are available — check local tourism groups or the Telangana Tourism site.";
+}
+if (matchedKeyword.includes("metro") || matchedKeyword.includes("auto") || matchedKeyword.includes("transport")) {
+  return "Hyderabad has a good metro network, buses, autos, and cabs like Ola/Uber. Metro is fast and convenient!";
+}
+if (matchedKeyword.includes("airport") && matchedKeyword.includes("ramoji")) {
+  return "You can take a cab or TSRTC bus from the airport to Ramoji Film City — around 1.5 hrs drive.";
+}
+if (matchedKeyword.includes("stay") || matchedKeyword.includes("hotel") || matchedKeyword.includes("area")) {
+  return "Banjara Hills, Jubilee Hills, and Gachibowli are great for comfort and access. For heritage, stay near Charminar.";
+}
+
   if (matchedKeyword.includes("contact")) {
     return "You can reach us via explore@hyderabadtour.com or check the Contact page.";
   }
+ if (matchedKeyword.includes("attraction") || matchedKeyword.includes("visit") || matchedKeyword.includes("places") || matchedKeyword.includes("explore")) {
+    return "There are attractions for every type of visitor — ask me about forts, museums, or temples!";
+  }
+
   if (matchedKeyword.includes("bye")) {
     return "Goodbye! Hope you enjoy your Hyderabad exploration!";
   }
 
-  return "I'm not sure about that. Ask me about a place, attraction, or anything tourism-related!";
+  return `I'm not sure about that. You can ask about:
+- Historical places (like forts or museums)
+- Fun spots (like amusement parks)
+- Family-friendly or kid activities
+- Romantic places
+- Shopping markets
+- Food recommendations
+- Best season or directions
+Try asking about any of these! 😊`;
 }
+
 
 // ---------------- SEND MESSAGE TO CHATBOT ----------------
 function sendMessage() {
